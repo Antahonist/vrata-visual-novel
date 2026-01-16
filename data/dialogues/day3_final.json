@@ -1,0 +1,61 @@
+[
+	{
+		"type": "dialogue",
+		"character": "narrator",
+		"text": "День 3. Анна находит Скит в лесу.",
+		"emotion": "neutral"
+	},
+	{
+		"type": "dialogue",
+		"character": "mikhail",
+		"text": "Анна.",
+		"emotion": "neutral"
+	},
+	{
+		"type": "dialogue",
+		"character": "anna",
+		"text": "Ты жив!",
+		"emotion": "sad"
+	},
+	{
+		"type": "dialogue",
+		"character": "mikhail",
+		"text": "Да. Я нашёл Безмолвие.",
+		"emotion": "neutral"
+	},
+	{
+		"type": "dialogue",
+		"character": "anna",
+		"text": "Почему ты не сказал?!",
+		"emotion": "angry"
+	},
+	{
+		"type": "dialogue",
+		"character": "mikhail",
+		"text": "Ты бы не поняла.",
+		"emotion": "sad"
+	},
+	{
+		"type": "choice",
+		"choices": [
+			{
+				"text": "Вернись. Мне нужен ты.",
+				"set_flag": "ending_type",
+				"flag_value": "denial"
+			},
+			{
+				"text": "Я понимаю. Прости.",
+				"set_flag": "ending_type",
+				"flag_value": "acceptance"
+			},
+			{
+				"text": "Я останусь с тобой здесь.",
+				"set_flag": "ending_type",
+				"flag_value": "escape"
+			}
+		]
+	},
+	{
+		"type": "end"
+	}
+]

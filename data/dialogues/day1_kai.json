@@ -1,0 +1,76 @@
+[
+	{
+		"type": "dialogue",
+		"character": "narrator",
+		"text": "День 1. Утро. Анна идёт в Зал Слушания.",
+		"emotion": "neutral"
+	},
+	{
+		"type": "dialogue",
+		"character": "kai",
+		"text": "Что тебе нужно?",
+		"emotion": "angry"
+	},
+	{
+		"type": "dialogue",
+		"character": "anna",
+		"text": "Я сестра Михаила. Хочу узнать, что с ним случилось.",
+		"emotion": "neutral"
+	},
+	{
+		"type": "dialogue",
+		"character": "kai",
+		"text": "Он ушёл. Давно. Зачем ворошить?",
+		"emotion": "angry"
+	},
+	{
+		"type": "choice",
+		"choices": [
+			{
+				"text": "Ты что-то скрываешь!",
+				"set_flag": "kai_opens",
+				"flag_value": false
+			},
+			{
+				"text": "Я вижу, тебе тоже тяжело.",
+				"set_flag": "kai_opens",
+				"flag_value": true
+			}
+		]
+	},
+	{
+		"type": "dialogue",
+		"character": "kai",
+		"text": "Он был особенным. Всегда спокойным. Я завидовал.",
+		"emotion": "sad",
+		"condition": "kai_opens"
+	},
+	{
+		"type": "dialogue",
+		"character": "kai",
+		"text": "Он часто ходил в Храм Врат ночами. Просто стоял у двери.",
+		"emotion": "neutral",
+		"condition": "kai_opens"
+	},
+	{
+		"type": "dialogue",
+		"character": "kai",
+		"text": "Я ничего не знаю. Оставь меня.",
+		"emotion": "angry",
+		"condition": "!kai_opens"
+	},
+	
+	{
+		"type": "dialogue",
+		"character": "narrator",
+		"text": "Анна засыпает в келье. Завтра новый день.",
+		"emotion": "neutral"
+	},
+	
+	{
+		"type": "set_flag",
+		"flag": "current_day",
+		"value": 2
+	},
+	
+]

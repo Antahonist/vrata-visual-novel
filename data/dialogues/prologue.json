@@ -1,0 +1,64 @@
+[
+	{
+		"type": "dialogue",
+		"character": "narrator",
+		"text": "Анна едет на автобусе через туманный лес.",
+		"emotion": "neutral"
+	},
+	{
+		"type": "dialogue",
+		"character": "narrator",
+		"text": "Автобус останавливается. Впереди — Врата Обители.",
+		"emotion": "neutral"
+	},
+	{
+		"type": "dialogue",
+		"character": "velir",
+		"text": "Добро пожаловать к Порогу.",
+		"emotion": "neutral"
+	},
+	{
+		"type": "dialogue",
+		"character": "anna",
+		"text": "Здравствуйте. Я Анна Сергеева. Звонила вчера.",
+		"emotion": "neutral"
+	},
+	{
+		"type": "dialogue",
+		"character": "velir",
+		"text": "Помню. Сестра Михаила. Проходи.",
+		"emotion": "neutral"
+	},
+	{
+		"type": "dialogue",
+		"character": "velir",
+		"text": "Все, кто приходит к Вратам, ищут одно и то же. Но не все готовы это найти.",
+		"emotion": "mysterious"
+	},
+	{
+		"type": "dialogue",
+		"character": "anna",
+		"text": "Что вы имеете в виду?",
+		"emotion": "neutral"
+	},
+	{
+		"type": "dialogue",
+		"character": "velir",
+		"text": "Узнаешь позже. Пойдём, покажу твою комнату.",
+		"emotion": "neutral"
+	},
+	{
+		"type": "dialogue",
+		"character": "narrator",
+		"text": "Анна засыпает. Завтра новый день.",
+		"emotion": "neutral"
+	},
+	{
+		"type": "set_flag",
+		"flag": "current_day",
+		"value": 1
+	},
+	{
+		"type": "end"
+	}
+]

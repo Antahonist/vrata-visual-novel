@@ -1,0 +1,58 @@
+[
+	{
+		"type": "dialogue",
+		"character": "narrator",
+		"text": "День 2. Утро. Анна встречает Мару.",
+		"emotion": "neutral"
+	},
+	{
+		"type": "dialogue",
+		"character": "mara",
+		"text": "Зачем ты пришла? Михаил сделал свой выбор.",
+		"emotion": "neutral"
+	},
+	{
+		"type": "dialogue",
+		"character": "anna",
+		"text": "Помогите мне понять что с ним.",
+		"emotion": "neutral"
+	},
+	{
+		"type": "dialogue",
+		"character": "mara",
+		"text": "Он пришёл ко мне. Сказал, что уходит искать Безмолвие. Я дала благословение.",
+		"emotion": "sad"
+	},
+	{
+		"type": "dialogue",
+		"character": "narrator",
+		"text": "Вечер. Анна снова встречает Велира.",
+		"emotion": "neutral"
+	},
+	{
+		"type": "dialogue",
+		"character": "velir",
+		"text": "Я знаю где он. В Ските, глубоко в лесу.",
+		"emotion": "neutral"
+	},
+	{
+		"type": "dialogue",
+		"character": "anna",
+		"text": "Почему вы молчали?!",
+		"emotion": "angry"
+	},
+	{
+		"type": "dialogue",
+		"character": "velir",
+		"text": "Потому что он попросил. Ты должна сама решить — искать или отпустить.",
+		"emotion": "neutral"
+	},
+	{
+		"type": "set_flag",
+		"flag": "current_day",
+		"value": 3
+	},
+	{
+		"type": "end"
+	}
+]

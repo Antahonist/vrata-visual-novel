@@ -1,0 +1,79 @@
+[gd_scene load_steps=5 format=3 uid="uid://bg60lrrtop08q"]
+
+[ext_resource type="Script" uid="uid://d1v152uyo3qp" path="res://scripts/locations/Gatehouse.gd" id="1_skxgy"]
+[ext_resource type="Texture2D" uid="uid://bnx0yfbxi8h5s" path="res://assets/background/gatehouse.png" id="2_77ugr"]
+[ext_resource type="PackedScene" uid="uid://b4fitkyq4bjmr" path="res://scenes/ui/DialogueBox.tscn" id="3_egytq"]
+[ext_resource type="PackedScene" uid="uid://dmlvm2nf8xi3q" path="res://scenes/ui/PauseMenu.tscn" id="3_skxgy"]
+
+[node name="Gatehouse" type="Node2D"]
+script = ExtResource("1_skxgy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background" type="TextureRect" parent="CanvasLayer"]
+z_index = -10
+z_as_relative = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_77ugr")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="CharacterLeft" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(400, 540)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/CharacterLeft"]
+offset_left = -350.0
+offset_top = -400.0
+offset_right = 550.0
+offset_bottom = 700.0
+color = Color(0.2509804, 0.5019608, 1, 1)
+
+[node name="Vignette" type="ColorRect" parent="CanvasLayer/CharacterLeft"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.3137255)
+
+[node name="CharacterRight" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(1520, 540)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/CharacterRight"]
+offset_left = -375.0
+offset_top = -400.0
+offset_right = 525.0
+offset_bottom = 700.0
+color = Color(0.2509804, 1, 0.5019608, 1)
+
+[node name="Vignette" type="ColorRect" parent="CanvasLayer/CharacterRight"]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 0.3137255)
+
+[node name="DialogueBox" parent="CanvasLayer" instance=ExtResource("3_egytq")]
+offset_top = -200.0
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="CanvasLayer"]
+custom_minimum_size = Vector2(600, 0)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -580.0
+offset_top = -400.0
+offset_right = 20.0
+offset_bottom = -360.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 10
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("3_skxgy")]
+process_mode = 3

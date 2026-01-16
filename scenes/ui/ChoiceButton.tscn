@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://vhq1i3iabowd"]
+
+[ext_resource type="Script" uid="uid://c0vjhcduqrs3l" path="res://scripts/ui/ChoiseButton.gd" id="1_wcx13"]
+
+[node name="ChoiseButton" type="Button"]
+custom_minimum_size = Vector2(0, 60)
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 18
+text = "\"Выбор игрока\""
+script = ExtResource("1_wcx13")

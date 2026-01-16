@@ -1,0 +1,58 @@
+[
+	{
+		"type": "dialogue",
+		"character": "narrator",
+		"text": "Анна стоит перед Вратами Обители.",
+		"emotion": "neutral"
+	},
+	{
+		"type": "dialogue",
+		"character": "velir",
+		"text": "Добро пожаловать к Порогу.",
+		"emotion": "neutral"
+	},
+	{
+		"type": "dialogue",
+		"character": "anna",
+		"text": "Здравствуйте. Я Анна Сергеева.",
+		"emotion": "neutral"
+	},
+	{
+		"type": "dialogue",
+		"character": "velir",
+		"text": "Все, кто приходит сюда, ищут одно и то же.",
+		"emotion": "mysterious"
+	},
+	{
+		"type": "choice",
+		"choices": [
+			{
+				"text": "Расскажите об Ордене Порога",
+				"set_flag": "shows_respect",
+				"flag_value": true
+			},
+			{
+				"text": "Где мой брат?",
+				"set_flag": "shows_respect",
+				"flag_value": false
+			}
+		]
+	},
+	{
+		"type": "dialogue",
+		"character": "velir",
+		"text": "Хороший выбор.",
+		"emotion": "neutral",
+		"condition": "shows_respect"
+	},
+	{
+		"type": "dialogue",
+		"character": "velir",
+		"text": "Слишком прямолинейно.",
+		"emotion": "neutral",
+		"condition": "!shows_respect"
+	},
+	{
+		"type": "end"
+	}
+]

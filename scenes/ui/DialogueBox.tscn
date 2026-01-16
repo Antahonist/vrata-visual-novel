@@ -1,0 +1,76 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4fitkyq4bjmr"]
+
+[ext_resource type="Script" uid="uid://5kxikyw4w33k" path="res://scripts/ui/DialogueBox.gd" id="1_xg44k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3cxg5"]
+bg_color = Color(0, 0, 0, 0.78431374)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+
+[node name="DialogueBox" type="Control"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_xg44k")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3cxg5")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="NameRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="CharacterAvatar" type="TextureRect" parent="MarginContainer/VBoxContainer/NameRow"]
+texture_filter = 2
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+stretch_mode = 5
+
+[node name="CharacterName" type="Label" parent="MarginContainer/VBoxContainer/NameRow"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.92156863, 0.23137255, 1)
+theme_override_font_sizes/font_size = 24
+text = "Велир"
+
+[node name="DialogueText" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "Добро пожаловать к Порогу"
+fit_content = true
+scroll_active = false
+
+[node name="ContinuePrompt" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6901961, 0.6901961, 0.6901961, 1)
+text = "▼ Нажмите для продолжения"
+horizontal_alignment = 2

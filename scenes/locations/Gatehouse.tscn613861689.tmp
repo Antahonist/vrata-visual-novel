@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg60lrrtop08q"]
+
+[ext_resource type="Script" uid="uid://d1v152uyo3qp" path="res://scenes/locations/Gatehouse.gd" id="1_skxgy"]
+[ext_resource type="PackedScene" uid="uid://db42036j5qo6i" path="res://scenes/ui/DialogueBox.tscn" id="3_egytq"]
+
+[node name="Gatehouse" type="Node2D"]
+script = ExtResource("1_skxgy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.16862746, 0.16862746, 0.16862746, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogueBox" parent="CanvasLayer" instance=ExtResource("3_egytq")]
+offset_top = -200.0
+
+[node name="ChoicesContainer" type="VBoxContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(600, 0)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 660.0
+offset_top = 680.0
+offset_right = 700.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 10
