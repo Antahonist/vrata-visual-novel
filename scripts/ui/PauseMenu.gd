@@ -25,11 +25,14 @@ func toggle_pause():
 	get_tree().paused = visible
 
 func _on_resume():
+	AudioManager.play_sfx("select_button")
 	toggle_pause()
 
 func _on_save():
+	AudioManager.play_sfx("select_button")
 	SaveSystem.save_game()
 
 func _on_main_menu():
 	get_tree().paused = false
+	AudioManager.play_sfx("select_button")
 	GameManager.return_to_menu()

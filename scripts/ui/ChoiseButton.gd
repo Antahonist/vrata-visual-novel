@@ -22,6 +22,7 @@ func _input(event):
 			_on_pressed()
 
 func _on_pressed():
+	AudioManager.play_sfx("select_button")
 	print("[ChoiceButton] Pressed: ", text)
 	DialogueManager.make_choice(choice_index)
-	get_parent().queue_free()
+	get_parent().visible = false

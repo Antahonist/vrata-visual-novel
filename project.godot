@@ -21,6 +21,7 @@ FlagManager="*res://scripts/autoload/FlagManager.gd"
 DialogueManager="*res://scripts/autoload/DialogueManager.gd"
 GameManager="*res://scripts/autoload/GameManager.gd"
 SaveSystem="*res://scripts/autoload/SaveSystem.gd"
+AudioManager="*res://scripts/autoload/AudioManager.gd"
 
 [display]
 

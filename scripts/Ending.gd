@@ -5,6 +5,9 @@ extends Control
 func _ready():
 	$Button.pressed.connect(_on_menu)
 	
+	# Включаем музыку финала
+	AudioManager.play_music("final_stage_theme")
+	
 	var ending = FlagManager.get_flag("ending_type")
 	
 	match ending:
@@ -18,4 +21,5 @@ func _ready():
 			ending_text.text = "КОНЕЦ"
 
 func _on_menu():
+	AudioManager.play_sfx("select_button")
 	get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")

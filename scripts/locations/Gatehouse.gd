@@ -26,6 +26,12 @@ func _ready():
 	# Меняем фон
 	change_background(day)
 	
+	# Включаем игровую музыку
+	if day == 3:
+		AudioManager.play_music("final_stage_theme")
+	else:
+		AudioManager.play_music("in_game_theme")
+	
 	# Загружаем диалог
 	match day:
 		0:
