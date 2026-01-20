@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bg60lrrtop08q"]
+[gd_scene load_steps=6 format=3 uid="uid://bg60lrrtop08q"]
 
 [ext_resource type="Script" uid="uid://d1v152uyo3qp" path="res://scripts/locations/Gatehouse.gd" id="1_skxgy"]
 [ext_resource type="Texture2D" uid="uid://bnx0yfbxi8h5s" path="res://assets/background/gatehouse.png" id="2_77ugr"]
 [ext_resource type="PackedScene" uid="uid://b4fitkyq4bjmr" path="res://scenes/ui/DialogueBox.tscn" id="3_egytq"]
 [ext_resource type="PackedScene" uid="uid://dmlvm2nf8xi3q" path="res://scenes/ui/PauseMenu.tscn" id="3_skxgy"]
+[ext_resource type="PackedScene" uid="uid://cuxuain4gbiot" path="res://scenes/ui/HistoryPanel.tscn" id="5_egytq"]
 
 [node name="Gatehouse" type="Node2D"]
 script = ExtResource("1_skxgy")
@@ -77,3 +78,5 @@ theme_override_constants/separation = 10
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("3_skxgy")]
 process_mode = 3
+
+[node name="HistoryPanel" parent="CanvasLayer" instance=ExtResource("5_egytq")]

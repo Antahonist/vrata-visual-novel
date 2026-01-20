@@ -9,8 +9,9 @@ signal dialogue_ended
 var current_dialogue = []
 var current_index = 0
 var is_active = false
-
+var dialogue_history: Array = []
 func load_dialogue(file_path: String) -> void:
+	dialogue_history.clear()
 	var file = FileAccess.open(file_path, FileAccess.READ)
 	if file == null:
 		push_error("Cannot open dialogue file: " + file_path)
@@ -51,10 +52,17 @@ func display_current_line() -> void:
 	# Обработка типов
 	match line["type"]:
 		"dialogue":
-			emit_signal("dialogue_line_displayed", 
-				line.get("character", ""), 
-				line["text"], 
-				line.get("emotion", "neutral"))
+			var character = line.get("character", "")
+			var text = line["text"]
+			var emotion = line.get("emotion", "neutral")
+			
+			# Сохраняем в историю
+			dialogue_history.append({
+				"character": character,
+				"text": text
+			})
+			
+			emit_signal("dialogue_line_displayed", character, text, emotion)
 		
 		"choice":
 			display_choices(line["choices"])
@@ -89,6 +97,12 @@ func make_choice(choice_index: int) -> void:
 		return
 	
 	var choice = line["choices"][choice_index]
+	
+	# Сохраняем выбор в историю
+	dialogue_history.append({
+		"character": "player",
+		"text": "► " + choice["text"]
+	})
 	
 	# Установить флаг
 	if choice.has("set_flag"):
